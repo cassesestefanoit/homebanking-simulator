@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🏦 Homebanking Simulator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es un simulador de homebanking desarrollado en **React + TypeScript**, con almacenamiento en **localStorage** y despliegue en **Netlify**.  
+Permite registrar usuarios, iniciar sesión, realizar depósitos y retiros, y visualizar movimientos recientes de cada cuenta.
 
-Currently, two official plugins are available:
+🌐 **Demo en línea:** [Homebanking Simulator en Netlify](https://69de4b36ba6cd9249dbdb266--fancy-cat-9b057a.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Funcionalidades principales
+- Registro de usuarios con validación de edad (entre 18 y 120 años).
+- Validación de contraseña (mínimo una mayúscula y un número).
+- Inicio de sesión multiusuario con persistencia en `localStorage`.
+- Dashboard personalizado con:
+  - Saldo actual.
+  - Movimientos recientes.
+  - Depósitos y retiros con alertas estilizadas (SweetAlert2).
+- Cierre de sesión seguro.
+- Interfaz moderna con **TailwindCSS** y componentes responsivos.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías utilizadas
+- **React + TypeScript**
+- **TailwindCSS**
+- **SweetAlert2**
+- **localStorage** para persistencia de datos
+- **Netlify** para despliegue
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalación y ejecución local
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/cassesestefanoit/homebanking-simulator.git
+   cd homebanking-simulator
+2. Instalar dependencias:
+   ```bash
+   npm install
+3. Ejecutar en modo desarrollo:
+   ```bash
+   npm run dev
+   
+4. Generar build de producción:
+   ```bash
+   npm run build
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 Despliegue en Netlify
+El proyecto está desplegado automáticamente en Netlify.
+Cada vez que se hace git push a GitHub, Netlify construye y publica la nueva versión.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Build command: npm run build
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Publish directory: dist (si usás Vite) o build (si usás Create React App).
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
+##👨‍💻 Autor
+Stefano Cassese
