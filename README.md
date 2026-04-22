@@ -3,7 +3,7 @@
 Este proyecto es un simulador de homebanking desarrollado en **React + TypeScript**, con almacenamiento en **localStorage** y despliegue en **Netlify**.  
 Permite registrar usuarios, iniciar sesión, realizar depósitos y retiros, y visualizar movimientos recientes de cada cuenta.
 
-🌐 **Demo en línea:** [Homebanking Simulator en Netlify](https://69de4b36ba6cd9249dbdb266--fancy-cat-9b057a.netlify.app/)
+🌐 **Demo en línea:** [Homebanking Simulator en Netlify](https://69e8d345caf8c3516b31556f--starlit-croquembouche-35cab5.netlify.app/)
 
 ---
 
